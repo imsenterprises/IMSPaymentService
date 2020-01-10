@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="https://countyprocessing.com/paymentAPI/service/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="https://countyprocessing.com/paymentAPI/service/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://countyprocessing.com/paymentAPI/service/">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="Transaction">
+        <xsd:all>
+          <xsd:element name="TransID" type="xsd:string" />
+          <xsd:element name="Status" type="xsd:string" />
+          <xsd:element name="StatusCode" type="xsd:int" />
+          <xsd:element name="Amount" type="xsd:float" />
+          <xsd:element name="CCFee" type="xsd:float" />
+          <xsd:element name="CheckFee" type="xsd:float" />
+          <xsd:element name="AuthCode" type="xsd:string" />
+          <xsd:element name="FeeAuthCode" type="xsd:string" />
+          <xsd:element name="PayType" type="tns:PayType" />
+          <xsd:element name="RefNumber" type="xsd:int" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:simpleType name="PayType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="na" />
+          <xsd:enumeration value="cc" />
+          <xsd:enumeration value="check" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="testRequest" />
+  <wsdl:message name="testResponse">
+    <wsdl:part name="Transaction" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="newTransRequest">
+    <wsdl:part name="TransID" type="xsd:string" />
+    <wsdl:part name="Amount" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="newTransResponse">
+    <wsdl:part name="Transaction" type="tns:Transaction" />
+  </wsdl:message>
+  <wsdl:message name="updateTransRequest">
+    <wsdl:part name="Transaction" type="tns:Transaction" />
+  </wsdl:message>
+  <wsdl:message name="updateTransResponse">
+    <wsdl:part name="Transaction" type="tns:Transaction" />
+  </wsdl:message>
+  <wsdl:message name="getTransRequest">
+    <wsdl:part name="TransID" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getTransResponse">
+    <wsdl:part name="Transaction" type="tns:Transaction" />
+  </wsdl:message>
+  <wsdl:message name="getJSRequest" />
+  <wsdl:message name="getJSResponse">
+    <wsdl:part name="JS" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getPaymentFormRequest">
+    <wsdl:part name="TransID" type="xsd:string" />
+    <wsdl:part name="Amount" type="xsd:float" />
+    <wsdl:part name="Stylesheet" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getPaymentFormResponse">
+    <wsdl:part name="Form" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="PaymentServicePortType">
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:testRequest" />
+      <wsdl:output message="tns:testResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="newTrans">
+      <wsdl:input message="tns:newTransRequest" />
+      <wsdl:output message="tns:newTransResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="updateTrans">
+      <wsdl:input message="tns:updateTransRequest" />
+      <wsdl:output message="tns:updateTransResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getTrans">
+      <wsdl:input message="tns:getTransRequest" />
+      <wsdl:output message="tns:getTransResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getJS">
+      <wsdl:input message="tns:getJSRequest" />
+      <wsdl:output message="tns:getJSResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPaymentForm">
+      <wsdl:input message="tns:getPaymentFormRequest" />
+      <wsdl:output message="tns:getPaymentFormResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PaymentServiceBinding" type="tns:PaymentServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/test" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="newTrans">
+      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/newTrans" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateTrans">
+      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/updateTrans" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTrans">
+      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getTrans" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getJS">
+      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getJS" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPaymentForm">
+      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getPaymentForm" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PaymentService">
+    <wsdl:port name="PaymentServicePort" binding="tns:PaymentServiceBinding">
+      <soap:address location="https://countyprocessing.com/paymentAPI/service/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
