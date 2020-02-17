@@ -10,8 +10,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-			System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-        	
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+
             var client = IMSPaymentService.Helper.GetClient(@"https://countyprocessing.com/paymentAPI/service/", "testing", "testing");
             var resp = client.getPaymentForm("b7243b35-b07b-404f-a90c-ec880cb79f32", 123.45f, "");
             Console.WriteLine(resp);
