@@ -16,52 +16,60 @@ namespace IMSPaymentService.PaymentAPI {
     public interface PaymentServicePortType {
         
         // CODEGEN: Generating message contract since the wrapper namespace (http://soapinterop.org/) of message testRequest does not match the default value (https://countyprocessing.com/paymentAPI/service/)
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/test", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/test", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         IMSPaymentService.PaymentAPI.testResponse test(IMSPaymentService.PaymentAPI.testRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/test", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/test", ReplyAction="*")]
         System.Threading.Tasks.Task<IMSPaymentService.PaymentAPI.testResponse> testAsync(IMSPaymentService.PaymentAPI.testRequest request);
         
         // CODEGEN: Generating message contract since the wrapper namespace (http://soapinterop.org/) of message newTransRequest does not match the default value (https://countyprocessing.com/paymentAPI/service/)
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/newTrans", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/newTrans", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         IMSPaymentService.PaymentAPI.newTransResponse newTrans(IMSPaymentService.PaymentAPI.newTransRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/newTrans", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/newTrans", ReplyAction="*")]
         System.Threading.Tasks.Task<IMSPaymentService.PaymentAPI.newTransResponse> newTransAsync(IMSPaymentService.PaymentAPI.newTransRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/updateTrans", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/updateTrans", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         IMSPaymentService.PaymentAPI.updateTransResponse updateTrans(IMSPaymentService.PaymentAPI.updateTransRequest request);
         
         // CODEGEN: Generating message contract since the operation has multiple return values.
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/updateTrans", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/updateTrans", ReplyAction="*")]
         System.Threading.Tasks.Task<IMSPaymentService.PaymentAPI.updateTransResponse> updateTransAsync(IMSPaymentService.PaymentAPI.updateTransRequest request);
         
         // CODEGEN: Generating message contract since the wrapper namespace (http://soapinterop.org/) of message getTransRequest does not match the default value (https://countyprocessing.com/paymentAPI/service/)
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getTrans", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/getTrans", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         IMSPaymentService.PaymentAPI.getTransResponse getTrans(IMSPaymentService.PaymentAPI.getTransRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getTrans", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/getTrans", ReplyAction="*")]
         System.Threading.Tasks.Task<IMSPaymentService.PaymentAPI.getTransResponse> getTransAsync(IMSPaymentService.PaymentAPI.getTransRequest request);
         
         // CODEGEN: Generating message contract since the wrapper namespace (http://soapinterop.org/) of message getJSRequest does not match the default value (https://countyprocessing.com/paymentAPI/service/)
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getJS", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/getJS", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         IMSPaymentService.PaymentAPI.getJSResponse getJS(IMSPaymentService.PaymentAPI.getJSRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getJS", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/getJS", ReplyAction="*")]
         System.Threading.Tasks.Task<IMSPaymentService.PaymentAPI.getJSResponse> getJSAsync(IMSPaymentService.PaymentAPI.getJSRequest request);
         
         // CODEGEN: Generating message contract since the wrapper namespace (http://soapinterop.org/) of message getPaymentFormRequest does not match the default value (https://countyprocessing.com/paymentAPI/service/)
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getPaymentForm", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/getPaymentForm", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         IMSPaymentService.PaymentAPI.getPaymentFormResponse getPaymentForm(IMSPaymentService.PaymentAPI.getPaymentFormRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getPaymentForm", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/getPaymentForm", ReplyAction="*")]
         System.Threading.Tasks.Task<IMSPaymentService.PaymentAPI.getPaymentFormResponse> getPaymentFormAsync(IMSPaymentService.PaymentAPI.getPaymentFormRequest request);
+        
+        // CODEGEN: Generating message contract since the wrapper namespace (http://soapinterop.org/) of message setRenewalOptionRequest does not match the default value (https://countyprocessing.com/paymentAPI/service/)
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/setRenewalOption", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        IMSPaymentService.PaymentAPI.setRenewalOptionResponse setRenewalOption(IMSPaymentService.PaymentAPI.setRenewalOptionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="https://countyprocessing.com/paymentAPI/service/createwsdl.php/setRenewalOption", ReplyAction="*")]
+        System.Threading.Tasks.Task<IMSPaymentService.PaymentAPI.setRenewalOptionResponse> setRenewalOptionAsync(IMSPaymentService.PaymentAPI.setRenewalOptionRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -428,6 +436,41 @@ namespace IMSPaymentService.PaymentAPI {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setRenewalOption", WrapperNamespace="http://soapinterop.org/", IsWrapped=true)]
+    public partial class setRenewalOptionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string TransID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
+        public string Key;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=2)]
+        public string Value;
+        
+        public setRenewalOptionRequest() {
+        }
+        
+        public setRenewalOptionRequest(string TransID, string Key, string Value) {
+            this.TransID = TransID;
+            this.Key = Key;
+            this.Value = Value;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setRenewalOptionResponse", WrapperNamespace="http://soapinterop.org/", IsWrapped=true)]
+    public partial class setRenewalOptionResponse {
+        
+        public setRenewalOptionResponse() {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PaymentServicePortTypeChannel : IMSPaymentService.PaymentAPI.PaymentServicePortType, System.ServiceModel.IClientChannel {
     }
@@ -586,6 +629,32 @@ namespace IMSPaymentService.PaymentAPI {
             inValue.Amount = Amount;
             inValue.Stylesheet = Stylesheet;
             return ((IMSPaymentService.PaymentAPI.PaymentServicePortType)(this)).getPaymentFormAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        IMSPaymentService.PaymentAPI.setRenewalOptionResponse IMSPaymentService.PaymentAPI.PaymentServicePortType.setRenewalOption(IMSPaymentService.PaymentAPI.setRenewalOptionRequest request) {
+            return base.Channel.setRenewalOption(request);
+        }
+        
+        public void setRenewalOption(string TransID, string Key, string Value) {
+            IMSPaymentService.PaymentAPI.setRenewalOptionRequest inValue = new IMSPaymentService.PaymentAPI.setRenewalOptionRequest();
+            inValue.TransID = TransID;
+            inValue.Key = Key;
+            inValue.Value = Value;
+            IMSPaymentService.PaymentAPI.setRenewalOptionResponse retVal = ((IMSPaymentService.PaymentAPI.PaymentServicePortType)(this)).setRenewalOption(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<IMSPaymentService.PaymentAPI.setRenewalOptionResponse> IMSPaymentService.PaymentAPI.PaymentServicePortType.setRenewalOptionAsync(IMSPaymentService.PaymentAPI.setRenewalOptionRequest request) {
+            return base.Channel.setRenewalOptionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<IMSPaymentService.PaymentAPI.setRenewalOptionResponse> setRenewalOptionAsync(string TransID, string Key, string Value) {
+            IMSPaymentService.PaymentAPI.setRenewalOptionRequest inValue = new IMSPaymentService.PaymentAPI.setRenewalOptionRequest();
+            inValue.TransID = TransID;
+            inValue.Key = Key;
+            inValue.Value = Value;
+            return ((IMSPaymentService.PaymentAPI.PaymentServicePortType)(this)).setRenewalOptionAsync(inValue);
         }
     }
 }

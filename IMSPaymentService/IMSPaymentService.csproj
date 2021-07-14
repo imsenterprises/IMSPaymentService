@@ -68,6 +68,9 @@
     <None Include="Connected Services\PaymentAPI\IMSPaymentService.PaymentAPI.newTransResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\PaymentAPI\IMSPaymentService.PaymentAPI.setRenewalOptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\PaymentAPI\IMSPaymentService.PaymentAPI.testResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

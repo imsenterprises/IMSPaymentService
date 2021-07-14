@@ -62,6 +62,12 @@
   <wsdl:message name="getPaymentFormResponse">
     <wsdl:part name="Form" type="xsd:string" />
   </wsdl:message>
+  <wsdl:message name="setRenewalOptionRequest">
+    <wsdl:part name="TransID" type="xsd:string" />
+    <wsdl:part name="Key" type="xsd:string" />
+    <wsdl:part name="Value" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="setRenewalOptionResponse" />
   <wsdl:portType name="PaymentServicePortType">
     <wsdl:operation name="test">
       <wsdl:input message="tns:testRequest" />
@@ -87,11 +93,15 @@
       <wsdl:input message="tns:getPaymentFormRequest" />
       <wsdl:output message="tns:getPaymentFormResponse" />
     </wsdl:operation>
+    <wsdl:operation name="setRenewalOption">
+      <wsdl:input message="tns:setRenewalOptionRequest" />
+      <wsdl:output message="tns:setRenewalOptionResponse" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="PaymentServiceBinding" type="tns:PaymentServicePortType">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
     <wsdl:operation name="test">
-      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/test" style="rpc" />
+      <soap:operation soapAction="https://countyprocessing.com/paymentAPI/service/createwsdl.php/test" style="rpc" />
       <wsdl:input>
         <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
@@ -100,7 +110,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="newTrans">
-      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/newTrans" style="rpc" />
+      <soap:operation soapAction="https://countyprocessing.com/paymentAPI/service/createwsdl.php/newTrans" style="rpc" />
       <wsdl:input>
         <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
@@ -109,7 +119,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="updateTrans">
-      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/updateTrans" style="rpc" />
+      <soap:operation soapAction="https://countyprocessing.com/paymentAPI/service/createwsdl.php/updateTrans" style="rpc" />
       <wsdl:input>
         <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
@@ -118,7 +128,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getTrans">
-      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getTrans" style="rpc" />
+      <soap:operation soapAction="https://countyprocessing.com/paymentAPI/service/createwsdl.php/getTrans" style="rpc" />
       <wsdl:input>
         <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
@@ -127,7 +137,7 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getJS">
-      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getJS" style="rpc" />
+      <soap:operation soapAction="https://countyprocessing.com/paymentAPI/service/createwsdl.php/getJS" style="rpc" />
       <wsdl:input>
         <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
@@ -136,7 +146,16 @@
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="getPaymentForm">
-      <soap:operation soapAction="http://countyprocessing.com/paymentAPI/service/createwsdl.php/getPaymentForm" style="rpc" />
+      <soap:operation soapAction="https://countyprocessing.com/paymentAPI/service/createwsdl.php/getPaymentForm" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRenewalOption">
+      <soap:operation soapAction="https://countyprocessing.com/paymentAPI/service/createwsdl.php/setRenewalOption" style="rpc" />
       <wsdl:input>
         <soap:body use="encoded" namespace="http://soapinterop.org/" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
